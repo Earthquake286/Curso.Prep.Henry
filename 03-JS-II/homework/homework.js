@@ -83,10 +83,7 @@ function esDiezOCinco(numero) {
   // Devuelve "true" si "numero" es 10 o 5
   // De lo contrario, devuelve "false"
   // Tu código:
-  if (numero==10 || numero==5){
-    return true;
-  }
-  return false;
+  return numero==10 || numero==5;
   
 }
 
@@ -94,11 +91,10 @@ function estaEnRango(numero) {
   // Devuelve "true" si "numero" es menor que 50 y mayor que 20
   // De lo contrario, devuelve "false"
   // Tu código:
-  if(20<numero && numero<50){
+  if(numero<50 && numero>20){
     return 'true';
   }
   return 'false';
-  
 }
 
 function esEntero(numero) {
@@ -111,9 +107,7 @@ function esEntero(numero) {
   // Tu código:
   if (Math.floor(numero)==numero){
     return 'true';
-  }
-  return 'false';
-  
+  }return 'false';
 }
 
 function fizzBuzz(numero) {
@@ -147,8 +141,9 @@ function operadoresLogicos(num1, num2, num3) {
     return 'Número 1 es mayor y positivo';
   }else if(num3==Math.max(num1,num2,num3)){
     return num3+1;
+  }else{
+  return 'false'; 
   }
-  return 'false';
 }
 
 function esPrimo(numero) {
@@ -157,6 +152,9 @@ function esPrimo(numero) {
   // Pista: un número primo solo es divisible por sí mismo y por 1
   // Pista 2: Puedes resolverlo usando un bucle `for`
   // Nota: Los números 0 y 1 NO son considerados números primos
+  if(numero==2){
+    return 'true';
+  }
   if(numero==0||numero==1){
     return 'false';
   }else{
@@ -195,13 +193,25 @@ function tablaDelSeis(){
 function tieneTresDigitos(numero){
   //Leer un número entero y retornar true si tiene 3 dígitos. Caso contrario, retorna false.
   //Escribe tu código aqui
-
+  if(numero > 99 && numero < 1000){
+    return 'true';
+  }else{
+    return 'false';
+  }
 }
 
 function doWhile(numero) {
   //Implementar una función tal que vaya aumentando el valor recibido en 5 hasta un límite de 8 veces
   //Retornar el valor final.
   //Usar el bucle do ... while.
+  var x = numero;
+  var i = 0;
+  do {
+    i = i + 1;
+    x = x + 5;
+  }
+  while(i < 8);
+  return x;
 }
 
 
